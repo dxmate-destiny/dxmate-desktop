@@ -1,0 +1,51 @@
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#logo {
+    width: 250px;
+}
+
+#loading-text {
+    font-size: 24px;
+    color: #fff;
+    text-align: left;
+    width: 100px;
+}
+
+#loading-text::after {
+    content: '';
+    animation: loadingAnimation 2s infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        content: '';
+    }
+    20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80% {
+        content: '...';
+    }
+    100% {
+        content: '...';
+    }
+}

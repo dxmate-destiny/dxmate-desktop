@@ -1,0 +1,67 @@
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.login-form-container {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252526;
+    border-radius: 16px;
+}
+
+#logo {
+    width: 200px;
+    margin-top: 40px;
+}
+
+#title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#description {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+#sign-in-button {
+    background-color: #fff;
+    border: 3px solid;
+    border-color: #fff;
+    border-radius: 8px;
+    color: #252526;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+#sign-in-button:hover {
+    background-color: #a7a7a7;
+    border-color: #a7a7a7;
+}
+
+#startgg-logo {
+    width: 15px;
+    margin-right: 10px;
+}
