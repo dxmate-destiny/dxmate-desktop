@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DXMATE / デラメイト</title>
+        <link rel="stylesheet" type="text/css" href="lobby.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.js"></script>
+    </head>
+    <body>
+        <div class="logo-container">
+            <img id="logo" src="../../images/logo/dxmate/0.png">
+            <p id="season">SEASON 1</p>
+        </div>
+        <div class="ready-container">
+            <div class="buttons-wrapper">
+                <button id="rank-button">
+                    <img id="rank-image" src="../../images/rank/0.png">
+                    <p id="rank-points">RANK_POINTS</p>
+                </button>
+                <div class="mode-wrapper">
+                    <button id="singles-button">SINGLES</button>
+                    <button id="doubles-button">DOUBLES</button>
+                </div>
+                <button id="ready-button">READY</button>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="first-profile-container">
+                <img id="player-avatar" src="../../images/icon/util/test.png">
+                <div class="stats-container">
+                    <p id="level">Lv. 999</p>
+                    <p id="player-name">PLAYER_NAME</p>
+                </div>
+            </div>
+            <div class="second-profile-container">
+                <div id="expbar"></div>
+            </div>
+        </div>
+        <div class="player-data-container">
+            <div class="player-data-wrapper">
+                <button id="slippi-connect-code-button">
+                    <img id="slippi-logo" src="../../images/logo/slippi/0.png">
+                    <p id="slippi-connect-code">ABC#123</p>
+                </button>
+                <button id="region-button">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <p id="region-code">NA</p>
+                </button>
+                <div class="online-player-counter-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <p id="online-player-counter">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="advertisement-container">
+            <img id="ad-current" src="../../images/ad/0.png">
+        </div>
+        <div class="leaderboard-container">
+            <p id="leaderboard-title">CURRENT TOP</p>
+            <div class="rank-1-container">
+                <p id="rank-1">#1</p>
+                <img id="rank-1-avatar" src="../../images/icon/util/1.png">
+                <p id="rank-1-name">ALTN | Destiny</p>
+                <div class="rank-1-rank-points-container">
+                    <img id="rank-1-rank-icon" src="../../images/rank/0.png">
+                    <p id="rank-1-rank-points">36542 RP</p>
+                </div>
+            </div>
+        </div>
+        <script src="lobby-renderer.js"></script>
+    </body>
+</html>

@@ -6,12 +6,18 @@ const { loadStartggCredentials, saveStartggCredentials } = require('./modules/st
 const { setTimeout } = require('node:timers/promises');
 
 const { dxmateApiBaseUrl } = require('./config/dxmate-api-config.json');
+const { default: axios } = require('axios');
 
 let mainWindow;
 let startggSigninWindow;
 let startggSignupWindow;
 
 let startggCredentials = {};
+
+let userData = {
+  startgg: {},
+  dxmate: {}
+}
 
 function createWindow () {
   // Create the browser window.
@@ -127,5 +133,66 @@ app.on('window-all-closed', function () {
 
   log.info('startgg credentials found.');
 
-  // Get DXMATE player data.
+  // Load loading page.
+  mainWindow.loadFile(path.join(__dirname, 'pages/loading/loading.html'));
+
+  try {
+    // Get start.gg user data.
+    const response = await axios.get(dxmateApiBaseUrl + '/players/startgg/me', {
+      params: {
+        accessToken: startggCredentials.accessToken
+      }
+    });
+    userData.startgg = response.data.data.currentUser;
+    log.info('Retrieved start.gg user data:', userData.startgg);
+  } catch (e) {
+    log.error(e);
+    return dialog.showErrorBox('Error', e.message);
+  }
+
+  // Get player ID (start.gg discriminator)
+  const playerId = userData.startgg.discriminator;
+  log.info('Retrieved Player ID:', playerId);
+
+  let isRegistered = false;
+
+  try {
+    // Check if the player registered.
+    const response = await axios.get(dxmateApiBaseUrl + `/players/${playerId}/registered`);
+    isRegistered = response.data;
+    log.info('Checked if the player is registered:', isRegistered);
+  } catch (e) {
+    log.error(e);
+    return dialog.showErrorBox('Error', e.message);
+  }
+
+  if (!isRegistered) {
+    log.info('Player is not registered yet, so need to register.');
+
+    // TODO: Load registration page.
+
+    try {
+      // Register player.
+      await axios.post(dxmateApiBaseUrl + '/players', {
+        playerId
+      });
+      log.info('Registered player.');
+    } catch (e) {
+      log.error(e);
+      return dialog.showErrorBox('Error', e.message);
+    }
+  }
+
+  try {
+    // Get player data.
+    const response = await axios.get(dxmateApiBaseUrl + `/players/${playerId}`);
+    userData.dxmate = response.data;
+    log.info('Retrieved player data:', userData.dxmate);
+  } catch (e) {
+    log.error(e);
+    return dialog.showErrorBox('Error', e.message);
+  }
+
+  // Load lobby page.
+  mainWindow.loadFile(path.join(__dirname, 'pages/lobby/lobby.html'));
 })();

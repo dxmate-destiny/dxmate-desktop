@@ -1,0 +1,326 @@
+body {
+    background-color: #1e1e1e;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#logo {
+    width: 200px;
+}
+
+#season {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ready-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rank-button {
+    background-color: #1e1e1e;
+    border: 3px solid;
+    border-color: #1e1e1e;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 150px;
+    height: 175px;
+}
+
+#rank-button:hover {
+    background-color: #4e4e4e;
+    border-color: #4e4e4e;
+}
+
+#rank-image {
+    width: 100px;
+}
+
+#rank-points {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.mode-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#singles-button {
+    width: 100px;
+    height: 30px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid;
+    border-color: #f28749;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+#doubles-button {
+    width: 100px;
+    height: 30px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid;
+    border-color: #1e1e1e;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+#doubles-button:hover {
+    border-color: #f28749;
+}
+
+#ready-button {
+    background-color: #f28749;
+    border: 3px solid;
+    border-color: #f28749;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#ready-button:hover {
+    background-color: #a85e33;
+    border-color: #a85e33;
+}
+
+.profile-container {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-weight: 600;
+}
+
+.first-profile-container {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stats-container {
+    margin-left: 10px;
+}
+
+#level {
+    color: #fff;
+}
+
+#expbar {
+    width: 200px;
+    height: 12px;
+}
+
+#player-name {
+    color: #fff;
+}
+
+#player-avatar {
+    width: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.player-data-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.player-data-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#slippi-connect-code-button {
+    width: 125px;
+    height: 30px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    background-color: #1e1e1e;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#slippi-logo {
+    width: 25px;
+}
+
+#slippi-connect-code {
+    color: #fff;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+#region-button {
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    background-color: #1e1e1e;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: #1e1e1e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-earth-americas {
+    font-size: 18px;
+    color: #fff;
+}
+
+#region-code {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#online-player-counter {
+    color: #fff;
+    font-size: 12px;
+}
+
+.online-player-counter-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+}
+
+.fa-user {
+    color: #fff;
+    font-size: 18px;
+}
+
+#online-player-counter {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.advertisement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    margin-right: 20px;
+}
+
+#ad-current {
+    width: 200px;
+    border: 2px solid;
+    border-radius: 8px;
+    border-color: #fff;
+}
+
+.leaderboard-container {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#leaderboard-title {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.rank-1-container {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0px;
+    background-color: #313131;
+    height: 50px;
+}
+
+#rank-1 {
+    font-size: 16px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+#rank-1-avatar {
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+#rank-1-name {
+    color: #fff;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.rank-1-rank-points-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: #4e4e4e;
+}
+
+#rank-1-rank-icon {
+    width: 30px;
+    margin-left: 10px;
+}
+
+#rank-1-rank-points {
+    color: #fff;
+    margin-left: 10px;
+}
